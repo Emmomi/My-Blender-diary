@@ -13,7 +13,7 @@ jobs:
     steps: 
       - name: make branch
         run: |
-          branch="issue${github.event.issue.number}"
+          branch="issue${{github.event.issue.number}}"
           echo "made ${branch}"
       - name: config
         run: |
@@ -23,7 +23,7 @@ jobs:
       - name: run python
         run: |
           Python add.py
-          ${github.event.issue.body}
+          ${{github.event.issue.body}}
 
       - name: pull
         run: |
