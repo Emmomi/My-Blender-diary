@@ -1,7 +1,7 @@
 name: Add-imaage
 
 on:
-  isuue:
+  issue:
     type:
       -opened
       -reopened
