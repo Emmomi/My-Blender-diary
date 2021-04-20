@@ -22,7 +22,7 @@ jobs:
 
       - name: run python
         run: |
-          Python add.py
+          python add.py
           ${{github.event.issue.body}}
 
       - name: pull
