@@ -1,0 +1,34 @@
+name: Add-imaage
+
+on:
+  isuue:
+    type:
+      -opened
+      -reopened
+
+
+jobs:
+  add-image:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: make branch
+        run: |
+          branch="issue${github.event.issue.number}"
+          echo "made ${branch}"
+      - name: config
+        run: |
+          git config --global user.name "Emmomi"
+          git config --global user.email "kgrowth12@gmail.com"
+
+      - name: run python
+        run: |
+          Python add.py
+          ${github.event.issue.body}
+
+      - name: pull
+        run: |
+          git checkout -b ${branch}
+          git add Blender-diary.md
+          git commit -a -m "${branch}"
+          git push https://github.com/Emmomi/My-Blender-diary.git
+      
