@@ -1,4 +1,5 @@
+import sys
 markdown=open("Blender-diary.md",mode='a')
-text=input()
-markdown.write("\n"+text)
+text=sys.argv[1]
+markdown.write("\n"+str(text))
 
