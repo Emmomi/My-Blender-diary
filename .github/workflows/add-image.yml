@@ -29,12 +29,17 @@ jobs:
 
       - name: run python
         run: |
+<<<<<<< HEAD
 
           Python add.py "${{github.event.issue.body}}"
 
           
  
+=======
+>>>>>>> fbfce978deee01d6133bf3f05a098155d274c121
 
+          Python add.py ${{github.event.issue.body}}
+          
       - name: pull
         run: |
           git checkout -b ${branch}
