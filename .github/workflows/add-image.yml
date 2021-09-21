@@ -29,8 +29,11 @@ jobs:
 
       - name: run python
         run: |
-          python add.py
-          ${{github.event.issue.body}}
+
+          Python add.py "${{github.event.issue.body}}"
+
+          
+ 
 
       - name: pull
         run: |
