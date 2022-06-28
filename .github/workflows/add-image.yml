@@ -31,7 +31,7 @@ jobs:
         run: |
 
 
-          Python add.py "${{github.event.issue.body}}"
+          Python add.py ToString("${{github.event.issue.body}}")
 
           
  
